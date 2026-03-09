@@ -1,84 +1,111 @@
-/*CELULAR*/
-@media (max-width: 600px ) {
-
-h1{
-font-size: 28px;
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    box-sizing: border-box;
 }
 
-.circle svg{
-width: 260px;
-height: 260px;
+body {
+    background: #0f172a;
+    color: white;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
 }
 
-#timer{
-font-size: 40px;
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
-button{
-
-width: 90%;
-margin: 6px 0;
-font-size: 16px;
-padding: 12px;
-
+/* --- CONTAINER DO TIMER (CÍRCULO) --- */
+.circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
 }
 
-body{
-background:#0f172a;
-color:white;
-font-family:Arial;
-
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-
-min-height: 100rem;
-margin:0;
-padding:20px;
+/* Deixa o SVG responsivo: ele cresce até o tamanho máximo definido */
+.circle svg {
+    max-width: 280px;
+    width: 100%;
+    height: auto;
 }
 
+#timer {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums; /* Evita que os números "pulem" */
 }
 
-body{
-background:#0f172a;
-color:white;
-font-family:Arial;
-text-align:center;
-margin-top:50px;
+#progress {
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 0.3s ease; /* Transição mais suave */
 }
 
-.circle{
-position:relative;
-display:flex;
-justify-content:center;
-align-items:center;
-margin:30px;
+/* --- TEXTO DE EXERCÍCIO --- */
+#exercise {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    min-height: 1.5em;
+    color: #94a3b8;
 }
 
-#timer{
-position:absolute;
-font-size:30px;
-font-weight:bold;
+/* --- BOTÕES --- */
+button {
+    width: 100%;
+    max-width: 300px; /* Não deixa o botão gigante em tablets */
+    margin: 8px 0;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
 }
 
-#progress{
-transform:rotate(-90deg);
-transform-origin:center;
-transition:stroke-dashoffset 1s linear;
+button:active {
+    transform: scale(0.98); /* Feedback de clique no celular */
 }
 
-button{
-margin:10px;
-padding:10px 20px;
-font-size:16px;
-border:none;
-border-radius:8px;
-background:#22c55e;
-color:white;
-cursor:pointer;
+button:hover {
+    background: #16a34a;
 }
 
-button:hover{
-background:#16a34a;
+/* Estilo específico para o botão de parar alarme */
+button[onclick="stopAlarm()"] {
+    background: #ef4444;
+}
+
+button[onclick="stopAlarm()"]:hover {
+    background: #dc2626;
+}
+
+/* --- ESTATÍSTICAS --- */
+#stats {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* --- AJUSTES PARA TELAS MUITO PEQUENAS --- */
+@media (max-width: 350px) {
+    #timer {
+        font-size: 2rem;
+    }
+    
+    .circle svg {
+        max-width: 220px;
+    }
 }
