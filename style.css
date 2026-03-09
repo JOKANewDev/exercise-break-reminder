@@ -1,3 +1,35 @@
+/*CELULAR*/
+@media (max-width: 600px) {
+
+h1{
+font-size: 26px;
+}
+
+.circle svg{
+width: 160px;
+height: 160px;
+}
+
+#timer{
+font-size: 28px;
+}
+
+button{
+
+width: 90%;
+margin: 6px 0;
+font-size: 16px;
+padding: 12px;
+
+}
+
+body{
+padding: 10px;
+text-align: center;
+}
+
+}
+
 body{
 background:#0f172a;
 color:white;
@@ -39,37 +71,4 @@ cursor:pointer;
 
 button:hover{
 background:#16a34a;
-}
-
-/* RESPONSIVO CELULAR */
-
-@media (max-width: 600px) {
-
-h1{
-font-size: 26px;
-}
-
-.circle svg{
-width: 160px;
-height: 160px;
-}
-
-#timer{
-font-size: 28px;
-}
-
-button{
-
-width: 90%;
-margin: 6px 0;
-font-size: 16px;
-padding: 12px;
-
-}
-
-body{
-padding: 10px;
-text-align: center;
-}
-
 }
