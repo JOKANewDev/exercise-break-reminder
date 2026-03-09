@@ -2,9 +2,11 @@
 
 Um app simples para lembrar você de **fazer pausas e exercícios enquanto trabalha ou estuda**.
 
-Ideal para quem passa muitas horas no computador.
-
+Ideal para quem passa muitas horas no computador
 ---
+## 🌐 Live Demo
+
+https://jokanewdev.github.io/exercise-break-reminder/
 
 ## 🚀 Features
 
