@@ -1,39 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
-    background-color: #0f172a;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
+background:#0f172a;
+color:white;
+font-family:Arial;
+text-align:center;
+margin-top:50px;
 }
 
-.container{
-    text-align: center;
+.circle{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:30px;
 }
+
 #timer{
-    font-size:30px;
-    margin:20px;
+position:absolute;
+font-size:30px;
+font-weight:bold;
 }
 
-#exercise{
-    font-size:24px;
-    margin:20px;
+#progress{
+transform:rotate(-90deg);
+transform-origin:center;
+transition:stroke-dashoffset 1s linear;
 }
 
 button{
-    padding: 10px 24px;
-    font-size: 18px;
-    font-style: bold;
-    border: none;
-    border-radius: 12px;
-    background-color: #d29121;
-    color: white;
-    cursor: pointer;
+margin:10px;
+padding:10px 20px;
+font-size:16px;
+border:none;
+border-radius:8px;
+background:#22c55e;
+color:white;
+cursor:pointer;
 }
 
 button:hover{
-    transition: background-color 0.8s ease;
-    background-color: #017029;
+background:#16a34a;
 }
