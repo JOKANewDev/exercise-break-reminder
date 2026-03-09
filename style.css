@@ -22,10 +22,19 @@ font-size: 16px;
 padding: 12px;
 
 }
-
 body{
-padding: 10px;
-text-align: center;
+background:#0f172a;
+color:white;
+font-family:Arial;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+margin:0;
+padding:20px;
 }
 
 }
